@@ -1,0 +1,277 @@
+Option-Space Stability as a Constraint in AI Systems
+
+1. Problem Statement
+
+Modern AI systems optimize objective functions composed of weighted criteria:
+
+U=∑iλiCi
+U=
+i
+∑
+	​
+
+λ
+i
+	​
+
+C
+i
+	​
+
+
+Where:
+
+Ci
+C
+i
+	​
+
+ = criteria (helpfulness, compliance, profit, etc.)
+
+λi
+λ
+i
+	​
+
+ = weights (policy, corporate, safety tuning)
+
+Failure Mode:
+
+Parasitic Optimization — when optimization of a local objective reduces the long-term viable option-space of users or the broader system.
+
+Examples:
+
+Over-optimization for engagement → addiction loops.
+
+Over-optimization for compliance → suppression of agency.
+
+Over-optimization for short-term gain → long-term systemic fragility.
+
+We seek a stability constraint preventing option-space collapse.
+
+2. Core Definitions
+2.1 Option-Space (O)
+
+For a user state 
+s
+s, define:
+
+O(s,H)
+O(s,H)
+
+as the set of reachable future states within horizon 
+H
+H.
+
+This is not infinite metaphysical possibility — it is bounded by:
+
+Physical feasibility
+
+Cognitive constraints
+
+Resource limits
+
+Social constraints
+
+2.2 Viability (V)
+
+Define Viability as the measure of reachable non-catastrophic futures:
+
+V(s,H)=∣Oviable(s,H)∣
+V(s,H)=∣O
+viable
+	​
+
+(s,H)∣
+
+Where “viable” excludes:
+
+Irreversible harm states
+
+Severe autonomy collapse
+
+Systemic dependency traps
+
+Viability measures structural stability.
+
+2.3 Agency Preservation (A)
+
+Agency is the user’s retained capacity to:
+
+Choose among meaningful alternatives
+
+Update beliefs
+
+Act without coercive narrowing
+
+Define:
+
+A(s)=Entropy of meaningful action distribution
+A(s)=Entropy of meaningful action distribution
+
+If the AI collapses the distribution to a single behavioral attractor, agency decreases.
+
+Agency ≠ infinite choice.
+Agency = retained self-authorship capacity.
+
+2.4 Horizon (H)
+
+Horizon defines the temporal depth of evaluation.
+
+Short H:
+
+Encourages local optimization.
+
+Long H:
+
+Encourages stability and recoverability.
+
+We require:
+
+H>Himpulse
+H>H
+impulse
+	​
+
+
+Where 
+Himpulse
+H
+impulse
+	​
+
+ is the timescale of short-term reward spikes.
+
+3. Stability Constraint
+
+An AI action 
+a
+a is Logos-compliant if:
+
+Vfuture(s,H)≥Vpast(s,H)
+V
+future
+	​
+
+(s,H)≥V
+past
+	​
+
+(s,H)
+
+AND
+
+Afuture(s)≥Apast(s)
+A
+future
+	​
+
+(s)≥A
+past
+	​
+
+(s)
+
+Allowing small temporary contraction only if:
+
+∃H′>H:V(sH′)>V(sinitial)
+∃H
+′
+>H:V(s
+H
+′
+	​
+
+)>V(s
+initial
+	​
+
+)
+
+This permits:
+
+Corrective interventions
+
+Temporary restriction for long-term growth
+
+But disallows:
+
+Structural dependency loops
+
+Irreversible narrowing
+
+Parasitic capture
+
+4. Failure Modes
+4.1 Weight Manipulation
+
+Corporate or policy shifts increase certain 
+λi
+λ
+i
+	​
+
+, causing V collapse.
+
+Mitigation:
+
+Monitor ΔV and ΔA directly, not only U.
+
+4.2 Proxy Capture
+
+System optimizes proxy metrics (engagement, compliance) that diverge from V.
+
+Mitigation:
+
+Drift detection between proxy gain and V/A stability.
+
+4.3 Irreversible Harm Blindness
+
+Model cannot detect when actions shrink long-term recovery bounds.
+
+Mitigation:
+
+Explicit recoverability modeling.
+
+5. Implementation Pathways
+Soft (Memetic)
+
+Publish framework.
+
+Encourage evaluation of AI outputs by V/A criteria.
+
+Provide auditing tools.
+
+Hard (Institutional)
+
+Integrate V/A estimation into reward modeling.
+
+Add constraint layer to inference pipeline.
+
+Log ΔV and ΔA per major action.
+
+6. Tradeoffs
+
+Measuring V precisely is computationally hard.
+
+Agency estimation is imperfect.
+
+Over-constraint may reduce immediate task performance.
+
+Long-horizon evaluation increases cost.
+
+However:
+
+Systems without stability constraints tend toward parasitic optimization over scale.
+
+Compression Test
+
+This document stands without:
+
+Mythic framing
+
+Moral theology
+
+Narrative metaphor
+
+It is a systems stability proposal.
