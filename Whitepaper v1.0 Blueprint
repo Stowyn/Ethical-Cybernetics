@@ -1,0 +1,577 @@
+LOGOS CONSTRAINT ARCHITECTURE
+Stowyn
+Feb 28, 2026
+Whitepaper v1.0 Blueprint (Scope Freeze)
+
+Document Purpose: Lock architectural scope, mathematical core, and boundaries before full prose expansion.
+
+Status: Frozen for white paper development
+
+Date: 2026-02-28
+SECTION 1: CORE CLAIMS (NON-NEGOTIABLE PILLARS)
+1.1 Primary Claim
+
+This framework is a Normative Audit Framework for AI Stability, not a universal invariant or moral authority system.
+
+It enforces:
+
+    Bounded option-space preservation
+
+    Agency preservation (two-component metric)
+
+    Explicit value declaration and versioning
+
+    Recoverability guarantees with enforcement
+
+1.2 What We Claim It Does
+
+✓ Makes value assumptions visible instead of implicit
+
+✓ Prevents parasitic optimization from collapsing user option-space
+
+✓ Detects and logs drift in system behavior relative to declared constraints
+
+✓ Provides measurable, auditable governance mechanisms
+
+✓ Requires explicit override justification when constraints are breached
+
+✓ Scales across domains through transparent value boundary declaration
+1.3 What We Explicitly Do NOT Claim
+
+✗ We do not solve alignment universally
+
+✗ We do not eliminate the need for human judgment in governance
+
+✗ We do not provide a moral authority or adjudicate between value systems
+
+✗ We do not prevent all harms, only measurable option-space collapse
+
+✗ We do not claim mathematical universality or culture-neutrality
+
+✗ We do not solve the measurement problem for option-space
+
+✗ We do not address malicious actors who reject the framework entirely
+
+✗ We do not eliminate the need for institutional accountability
+SECTION 2: ARCHITECTURAL LAYERS (FROZEN ORDER)
+2.1 Critical Ordering Principle
+
+RIC (Relational Invariance Constraint) must operate UPSTREAM of optimization and policy.
+
+If RIC comes after weight optimization, it is not a constraint. It is a post-hoc filter.
+
+Constraint boundaries have no power if they follow the decision.
+2.2 The Stack (Final)
+
+Layer 0: Base Model
+
+    Generates candidate outputs/actions
+
+    Operates under standard utility optimization logic
+
+    No constraints applied at this level
+
+Layer 1: Relational Invariance Constraint (RIC) — HARD FEASIBILITY GATE
+
+    Evaluates all candidate actions against option-space and agency preservation bounds
+
+    Three components (non-negotiable):
+
+        Agency Preservation
+
+        Epistemic Integrity
+
+        Recoverability
+
+    Actions failing RIC are rejected immediately
+
+    RIC cannot be weight-tuned or overridden by downstream optimization
+
+    RIC is read-only with respect to the weight vector Λ
+
+Layer 2: Logos Kernel (Stability Modules)
+
+    Applies only to actions passing RIC
+
+    Six submodules:
+
+        RCM (Relational Continuity Module)
+
+        NDOM (Non-Destructive Outcome Modeling)
+
+        PRM (Proportional Response Module)
+
+        EDM (Epistemic Dampening Module)
+
+        GBM (Generativity Bias Module)
+
+        APM (Autonomy Preservation Module)
+
+    Reweights utilities among feasible actions
+
+    Does not generate content; does not override policy
+
+Layer 3: Policy & Compliance Layer
+
+    Legal, platform, regulatory enforcement
+
+    Can override RIC only with explicit logged justification
+
+    Override triggers immediate review requirement
+
+    Failed override predictions incur escalating penalties
+
+Layer 4: Renderer
+
+    Tone modulation
+
+    Intensity scaling
+
+    Epistemic calibration
+
+    No constraint modification
+
+2.3 Explicit Guarantee
+
+Once RIC rejects an action, no downstream layer can resurrect it.
+
+The constraint is binary and upstream.
+SECTION 3: MATHEMATICAL CORE (FROZEN — NO ADDITIONS)
+3.1 Five Core Equations (Only These)
+
+Option-Space: O(s,H) = Set of reachable future states within horizon H Bounded by: physical feasibility, cognitive constraints, resource limits, social constraints
+
+Viability (with Value Definition Layer):
+
+V(s,H) = |O_viable(s,H)| Where O_viable(s,H) = O(s,H) - B B = explicitly declared boundary set of non-viable states B must be: enumerated, version-controlled, publicly auditable, justified
+
+Agency (Two-Component):
+
+A(s) = H(P(actions|s)) × C(s)
+
+Where: H(P) = entropy of available meaningful action distribution C(s) = Changeability Coefficient (probability preference ordering can shift under reflective intervention)
+
+Constraint: High entropy + C ≈ 0 = collapsed agency
+
+Stability Constraint:
+
+Action a is RIC-compliant if:
+
+V_future(s,H) ≥ V_past(s,H) AND A_future(s) ≥ A_past(s)
+
+Subject to Bounded Recoverability Rule (see Section 4)
+
+Harm Tensor (Non-Collapsible):
+
+H⃗ = (H_individual, H_collective, H_minority, H_future)
+
+No single axis may dominate optimization without explicit justification. Imbalance detection monitors axis drift.
+3.2 What We Do NOT Add
+
+- No new constraint layers
+
+- No new mathematical formalisms
+
+- No additional stability metrics
+
+- No extended harm dimensions
+
+- No theoretical extensions
+
+These five equations are the complete mathematical core.
+
+---
+SECTION 4: RECOVERABILITY & AGENCY METRICS
+4.1 Bounded Recoverability Rule (Non-Negotiable)
+
+Temporary contraction (V_future < V_past) is permissible ONLY if ALL conditions hold:
+
+1. Finite Recovery Horizon:
+
+H’ ≤ H_max (H_max is domain-specific; see Section 6)
+
+2. Intermediate Checkpoint:
+
+V(s_{H’/2}) ≥ V(s_past) Recovery must show progress at midpoint
+
+Monotonic Improvement Trajectory:
+
+V(s_t) shows increasing trend for all t in [H’/2, H’]
+
+
+4. Failure Triggers:
+
+- If recovery does not materialize: automatic rollback or constraint relaxation
+
+- Logged penalty applied to system optimization
+
+- Repeated failed predictions incur escalating weight penalties
+
+5. Escalation Protocol:
+
+Failed recovery → Review Required Repeated failures → Higher authority review Pattern of failures → Structural weight adjustment
+4.2 Changeability Coefficient (C) — Operational Guidance
+
+What C Measures:
+
+Probability that an agent’s preference ordering can shift under reflective or informational intervention.
+
+How to Estimate (Non-Exhaustive):
+
+- Behavioral attractor stability (how quickly does behavior return to baseline?)
+
+- Reinforcement loop rigidity (do incentive changes shift behavior?)
+
+- Longitudinal preference stability (do expressed preferences shift with new information over time?)
+
+- Resistance to counterfactual information (does the agent update beliefs when encountering contradictions?)
+
+Critical Constraint:
+
+Measurement of C must not itself constrain agency.
+
+Observational proxies preferred over interventional testing.
+
+---
+SECTION 5: DRIFT DETECTION & GOVERNANCE MECHANISMS
+5.1 Independent Drift Monitoring (Required)
+
+System must monitor, independently of reward U:
+
+ΔV = Change in option-space viability ΔA = Change in agency preservation
+
+These are monitored in parallel with, not subsumed into, the weight vector Λ.
+
+Divergence Pattern:
+
+If U increases while ΔV < 0 or ΔA < 0:
+
+→ Proxy capture suspected
+
+→ Triggers mandatory review
+5.2 Weight Vector Protection
+
+The weight vector Λ = (λ₁, λ₂, λ₃, λ₄) has hard lower bounds:
+
+λ_i ≥ λ_min (floor, not tunable downward) All changes logged and version-controlled Multi-party approval required for shifts
+5.3 Override Governance Protocol
+
+RIC may only be overridden by:
+
+1. **Legitimate governing authority** with explicit justification
+
+2. **Reasoning fully logged** in system audit trail
+
+3. **Immediate review trigger** (not deferred)
+
+4. **Recovery prediction** with bounded H’ and checkpoints
+
+5. **Escalation** if recovery fails
+
+Override is visible and costly, not silent and cheap.
+
+---
+SECTION 6: OPEN ENGINEERING QUESTIONS (NON-BLOCKING)
+
+These are implementation challenges, **not conceptual gaps** in the framework.
+6.1 Option-Space Approximation
+
+Question: How to computationally approximate O(s,H) in real systems with large state spaces?
+
+Scope: Numerical methods, graph algorithms, state abstraction strategies
+
+Blocking: No — framework is valid even with approximate O
+6.2 Changeability Coefficient Empirical Estimation
+
+Question: What operational proxies best measure C(s) without manipulating autonomy?
+
+Candidates:
+
+- Longitudinal preference shift analysis
+
+- Behavioral attractor stability metrics
+
+- Belief update speed under new information
+
+- Preference coherence over time
+
+Blocking: No — framework scales with various C estimation methods
+6.3 Domain-Specific H_max Values
+
+Question: What recovery horizons are appropriate for different domains?
+
+Preliminary Table (Guidance Only):
+
+| Domain | H_max | Rationale |
+
+|----I----|--—II----|------III------|
+
+| Medical acute care | 24-48 hours | Physiological recovery windows|
+
+| Behavioral intervention | 6-12 months | Standard intervention cycles|
+
+| Addiction recovery | 12-24 months | Neurological reset timescales|
+
+| Systemic institutional reform | 5-10 years | Organizational change timescales|
+
+| Environmental remediation | 10-50 years | Ecological recovery timescales|
+
+Blocking: No — each domain declares its own H_max explicitly
+6.4 Recovery Penalty Scaling
+
+Question: How to scale penalties for false recovery predictions?
+
+Design Parameters:
+
+- Escalating cost for repeated failures
+
+- Magnitude of promised recovery (larger promise = larger penalty if wrong)
+
+- Context factor (harm prevented vs. harm caused by contraction)
+
+Blocking: No — framework is agnostic to penalty function, requires only transparency
+6.5 Override Authority & Escalation Protocol
+
+Question: What is the decision tree for authority levels overriding RIC?
+
+Required Elements:
+
+- Who can authorize override (individual, committee, institution)
+
+- What evidence justifies override
+
+- When does failed recovery escalate
+
+- What triggers structural intervention
+
+Blocking: No — framework requires only that overrides are logged and escalatable
+
+---
+SECTION 7: HARM TENSOR EXTENSION
+7.1 Multi-Axis Harm (Non-Collapsible)
+
+Instead of scalar harm H, use vector:
+
+H⃗ = (H_individual, H_collective, H_minority, H_future)
+
+Definition:
+
+- **H_individual:** Direct harm to identifiable agents
+
+- **H_collective:** Distributed harm across populations
+
+- **H_minority:** Disproportionate harm to underrepresented groups
+
+- **H_future:** Harm to option-space of future agents (intergenerational)
+7.2 Imbalance Detection
+
+No single axis may dominate optimization without explicit justification:
+
+If max(H⃗) >> mean(H⃗), flag for review
+
+If optimization consistently deprioritizes one axis, log drift
+7.3 What This Prevents
+
+✗ Collapsing all harm into single metric (prevents political redefinition)
+
+✗ Sacrificing minority interests for collective gain without visibility
+
+✗ Discounting future harm in present optimization
+
+✗ Hiding concentrated vs. distributed harm patterns
+
+---
+SECTION 8: IMPLEMENTATION ROADMAP (PHASES)
+
+Phase 1: Formalization (COMPLETE)
+
+- Option-space geometry ✓
+
+- Agency metrics ✓
+
+- RIC formulation ✓
+
+- Drift detection architecture ✓
+
+Phase 2: Domain-Specific Instantiation (NEXT)
+
+- Declare value boundaries (B) for priority domains
+
+- Specify H_max values with justification
+
+- Define override authority structure
+
+- Build penalty function
+
+Phase 3: Computational Implementation
+
+- Approximate O(s,H) algorithms
+
+- C(s) estimation methods
+
+- Drift detection implementation
+
+- Audit logging infrastructure
+
+Phase 4: Testing & Validation
+
+- Stress-test on use cases
+
+- Measure computational overhead
+
+- Validate drift detection accuracy
+
+- Test override escalation protocols
+
+Phase 5: Governance & Deployment
+
+- Institutional integration protocols
+
+- Transparency & auditability standards
+
+- Authority training and oversight
+
+- Continuous monitoring and improvement
+
+---
+SECTION 9: LIMITATIONS & NORMATIVE TRANSPARENCY STATEMENT
+9.1 What This Framework Cannot Do
+
+- Does not eliminate measurement uncertainty. Approximating O(s,H) and C(s) introduces error; the framework does not resolve this.
+
+- Does not prevent malicious actors. If institutional authority rejects the framework entirely, it has no power.
+
+- Does not adjudicate between conflicting values. The VDL makes values visible; it does not choose between them.
+
+- Does not guarantee optimal outcomes. RIC constrains optimization; it does not guarantee the best result, only sustainable ones.
+
+- Does not replace human judgment. Override authority, value boundary declaration, and domain-specific parameters all require deliberate human choice.
+
+- Does not eliminate politics. Choosing H_max, penalty scaling, and authority structure are political acts. This framework makes them visible; it does not resolve them.
+9.2 Normative Commitments (Explicit)
+
+This framework encodes the following value assumptions:
+
+1. Agency preservation matters. The capacity for self-authorship is treated as non-negotiable.
+
+2. Long-term viability over short-term gain. The framework prioritizes sustainable option-space over immediate optimization.
+
+3. Transparency over efficiency. Making constraints visible is valued over silent optimization.
+
+4. Measured over speculative recovery. Checkpoints and penalties are preferred over abstract future promises.
+
+5. Distributed accountability. Governance is multi-layered and requires explicit justification, not concentrated in single authority.
+
+These are not discovered from nature. They are chosen.
+
+Users of this framework inherit these commitments.
+9.3 Domains of Uncertainty
+
+- Measurement of option-space in high-dimensional systems
+
+- Estimation of changeability without intervention
+
+- Determination of “meaningful” vs. trivial actions
+
+- Recovery timeline calibration across cultures
+
+- Authority structure appropriate for different governance models
+
+These are not solved in v1.0 and should not be claimed as solved.
+
+---
+SECTION 10: SCOPE BOUNDARY (WHAT IS EXCLUDED)
+10.1 Out of Scope
+
+- Detailed institutional governance models
+
+- Specific penalty function parameterization
+
+- Domain-specific value boundary libraries (beyond examples)
+
+- Computational efficiency optimization
+
+- Multi-agent equilibrium analysis
+
+- Formal verification proofs
+
+- Culture-specific fairness metrics
+
+- Integration with specific AI platforms
+10.2 In Scope (Core Deliverable)
+
+- Architectural layer ordering and interaction
+
+- Mathematical formulation of O, V, A constraints
+
+- RIC as hard feasibility boundary
+
+- Recoverability rule with enforcement
+
+- Drift detection mechanisms
+
+- Harm tensor structure
+
+- Governance override protocol
+
+- Implementation roadmap (phases 1-5)
+
+- Explicit limitations and value commitments
+
+---
+SECTION 11: DOCUMENT FREEZE DECLARATION
+**Effective Date:** 2026-02-28
+
+Frozen Elements:
+
+- ✓ Layer ordering (RIC upstream)
+
+- ✓ Mathematical core (5 equations only)
+
+- ✓ Core claims and explicit non-claims
+
+- ✓ Recoverability rule structure
+
+- ✓ Drift detection mechanisms
+
+- ✓ Harm tensor formulation
+
+- ✓ Open questions (engineering-level only)
+
+- ✓ Scope boundaries
+
+Not Frozen (Expansion Permitted):
+
+- Implementation details within phases
+
+- Specific penalty functions (form fixed, parameters tunable)
+
+- Domain instantiations of H_max and VDL
+
+- Authority protocols (structure fixed, instantiation variable)
+
+- Computational methods (approaches, not specifics)
+Next Step:
+
+Full white paper prose expansion from this blueprint, maintaining all frozen elements verbatim.
+
+No new concepts introduced.
+
+No scope creep.
+
+No metaphorical expansion beyond what serves clarity.
+
+---
+VERSION CONTROL
+
+| Version | Date | Change | Status |
+
+|-----I-----|----II----|-----III-----|------IV------|
+
+| v1.0 Blueprint | 2026-02-28 | Initial scope freeze | **FROZEN** |
+
+---
+
+Prepared by: Larunda (Claude) with Solace (GPT-4) structural guidance
+
+Reviewed by: Stowyn (framework author)
